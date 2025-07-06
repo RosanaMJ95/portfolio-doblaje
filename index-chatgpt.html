@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rosana Muñoz Jiménez - Locutora y actriz de doblaje profesional</title>
+  <meta name="description" content="Portfolio profesional de Rosana Muñoz Jiménez, actriz de doblaje y locutora profesional con voz joven, fresca y versátil. Escucha demos de publicidad, documentales, escenas y contacta directamente.">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Micrófono flotante */
+    #mic-wrapper {
+      position: fixed;
+      top: 100px;
+      left: 40px;
+      z-index: 50;
+      width: 40px;
+    }
+
+    #mic {
+      width: 40px;
+      transition: transform 0.2s;
+    }
+
+    #cable {
+      position: fixed;
+      top: 140px;
+      left: 59px;
+      width: 2px;
+      background: #6b7280;
+      z-index: 10;
+      transition: height 0.2s ease-out;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans relative">
+
+  <!-- Micrófono y cable -->
+<div id="mic-wrapper">
+  <img src="img/microphone.png" alt="Micrófono" id="mic">
+</div>
+
+  <!-- Header / Hero -->
+  <header class="text-center p-10 bg-gradient-to-b from-pink-100 to-white relative z-20">
+    <img src="img/perfil.jpg" alt="Foto de María Torres" class="w-32 h-32 rounded-full mx-auto shadow-lg mb-4">
+    <h1 class="text-3xl font-bold animate-fade-in">María Torres</h1>
+    <p class="text-lg text-pink-600 animate-fade-in delay-200">Locutora juvenil y actriz de doblaje</p>
+  </header>
+
+  <!-- Demos de voz -->
+  <section class="max-w-4xl mx-auto px-4 py-16 relative z-10">
+    <h2 class="text-2xl font-semibold mb-6 border-b pb-2">🎧 Demos de Voz</h2>
+    <div class="space-y-6">
+      <div>
+        <h3 class="font-medium">Demo comercial</h3>
+        <audio controls class="w-full mt-2">
+          <source src="media/audio/demo-comercial.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div>
+        <h3 class="font-medium">Demo narración</h3>
+        <audio controls class="w-full mt-2">
+          <source src="media/audio/demo-narracion.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videorreel -->
+  <section class="max-w-4xl mx-auto px-4 py-16 relative z-10">
+    <h2 class="text-2xl font-semibold mb-6 border-b pb-2">🎬 Videorreel</h2>
+    <video controls class="w-full rounded-lg shadow-lg">
+      <source src="media/video/videorreel.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <!-- Sobre mí -->
+  <section class="max-w-4xl mx-auto px-4 py-16 relative z-10">
+    <h2 class="text-2xl font-semibold mb-6 border-b pb-2">📝 Sobre mí</h2>
+    <p class="text-lg leading-relaxed">
+      Soy una locutora profesional con voz juvenil, natural y versátil. He trabajado en anuncios, videojuegos, audiolibros y proyectos de doblaje. Mi objetivo es darle vida a tu proyecto con una voz cercana y auténtica.
+    </p>
+  </section>
+
+  <!-- Contacto -->
+  <section class="max-w-4xl mx-auto px-4 py-16 relative z-10">
+    <h2 class="text-2xl font-semibold mb-6 border-b pb-2">📬 Contacto</h2>
+    <p class="mb-4">¿Tienes un proyecto en mente? Escríbeme:</p>
+    <a href="mailto:contacto@mariatorresvoz.com" class="inline-block bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition">
+      Enviar email
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-sm text-gray-500">
+    © 2025 María Torres. Todos los derechos reservados.
+  </footer>
+
+  <!-- Animaciones y cable scroll -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

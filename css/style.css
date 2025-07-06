@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,400&family=Righteous&display=swap');
+
+.contenedor {
+  width: 80%;
+  margin: 40px auto;
+  padding: 2rem;
+  border-radius: 16px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor1 {
+  background-color: #F6EFE1; /* Beige */
+  color: #9E8E74;      /* Marrón */
+  padding: 2rem;
+  padding-top: 10rem;
+}
+
+.contenedor2 {
+  background-color: #9E8E74; /* Marrón */
+  color: #F6EFE1;
+  display: flex;
+  justify-content: space-between; /* espacio entre los contenedores */
+  align-items: flex-start;        /* alinea al inicio verticalmente */
+  gap: 2rem;                      /* espacio entre columnas */
+  padding: 2rem;
+  position: relative
+}
+
+.contenedor3 {
+  background-color: #FAF6EE; /* Casi blanco */
+  color: #F6EFE1;            /* Beige */
+}
+
+.contenedor4 {
+  background-color: #92472C; /* Marrón rojizo */
+  color: #F6EFE1;            /* Beige */
+}
+.contenedor-izquierdo,
+.contenedor-derecho {
+  flex: 1;                        /* ambos ocupan la misma anchura */
+  background-color: rgba(255, 255, 255, 0); /* semitransparente para ver el fondo */
+  padding: 2rem;
+  border-radius: 12px;
+  position: relative
+}
+
+.contenedor-redes {
+  display: flex;
+  flex-direction: row;     /* asegúrate de que esté en fila */
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;         /* por si no cabe todo, pasen a la siguiente línea */
+  width: 100%;             /* que ocupe todo el ancho disponible */
+  gap: 10px;
+}
+
+.columna-red {
+  display: flex;
+  align-items: baseline; /* clave para alinear texto con ícono más pequeño */
+  gap: 16px;
+  color: inherit;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 100;
+  font-size: 36pt;
+}
+
+.columna-red img {
+  height: 20px;
+  width: auto;
+  display: inline-block; /* esto es importante para baseline */
+}
+
+.imagen-microfono {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(49.5%) scale(1.15);
+}
+
+/* General text defaults */
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 400; /* regular */
+  font-size: 36pt;
+  color: inherit; /* el color viene del contenedor */
+}
+
+h1 {
+  line-height: 0.65; /* reduce el espacio vertical entre los spans */
+  margin: 0;       /* elimina márgenes externos del h1 */
+  padding: 0;
+}
+
+.nombre {
+  display: block;
+  font-family: 'Righteous', cursive;
+  font-size: 100pt;
+  margin: 0;
+}
+
+.apellidos {
+  display: block;
+  font-family: 'Righteous', cursive;
+  font-size: 52pt;
+  margin: 0;
+}
+
+/* Profesión */
+.profesion {
+  padding-top: 50pt;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 100; /* Thin */
+  font-size: 18pt;
+  color: inherit;
+  margin: 0;
+}
+
+/* Secciones principales */
+h2 {
+  font-family: 'Righteous', cursive;
+  font-size: 130pt;
+  color: inherit;
+  margin: 0;
+}
+
+/* Subtítulos o secciones menores */
+h3 {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 400; /* regular */
+  font-size: 50pt;
+  color: inherit;
+  margin: 0;
+}
+
+/* Texto normal */
+p, span, li {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 400;
+  font-size: 36pt;
+  color: inherit;
+}
+
+/* Redes sociales u otras etiquetas pequeñas */
+.redes {
+  padding-top: 30pt;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 100; /* Thin */
+  font-size: 15pt;
+  color: inherit;
+  margin: 0;
+}
+
