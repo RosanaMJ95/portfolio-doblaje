@@ -1,20 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,400&family=Righteous&display=swap');
 
-.contenedor {
-  width: 80%;
-  margin: 40px auto;
-  padding: 2rem;
-  border-radius: 16px;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
 .contenedor1 {
   background-color: #F6EFE1; /* Beige */
   color: #9E8E74;      /* Marrón */
   padding: 2rem;
   padding-top: 10rem;
+  padding-bottom: 0;
+}
+
+.contenedor1b {
+  position: relative; /* para que el h2 se posicione relativo a este contenedor */
+  z-index: 1;
+  display: flex;
+  gap: 0rem;          /* espacio entre los dos contenedores */
+  align-items: top;
+  height: auto; 
+  align-items: stretch; 
+}
+
+.contenedor1b h2 {
+  color: #F6EFE1;
+  position: absolute;
+  top: -95px;          /* ajusta cuánto sobresale hacia arriba */
+  right: 5rem;          /* opcional, para posicionar horizontalmente */
+  z-index: 10;         /* que esté por encima de la imagen del contenedor anterior */
+  background-color: inherit; /* para que no se mezcle con fondo debajo */
+  padding: 0 1rem;     /* un poco de padding para que se vea mejor */
 }
 
 .contenedor2 {
@@ -30,7 +41,17 @@
 
 .contenedor3 {
   background-color: #FAF6EE; /* Casi blanco */
-  color: #F6EFE1;            /* Beige */
+  color: #9E8E74;            /* Marron */
+  position: relative;
+}
+
+.contenedor3 h2 {
+  color: #FAF6EE;
+  position: absolute;
+  top: -99px;       /* ajusta cuánto sobresale hacia arriba */
+  left: 10rem;          /* opcional, para posicionar horizontalmente */
+  z-index: 10;         /* que esté por encima de la imagen del contenedor anterior */
+  padding: 0 1rem;     /* un poco de padding para que se vea mejor */
 }
 
 .contenedor4 {
@@ -72,11 +93,49 @@
   display: inline-block; /* esto es importante para baseline */
 }
 
+.contenedor-foto,
+.contenedor-aboutme {
+  flex: 1;           /* ambos ocupan la mitad del contenedor */
+  position: relative;
+  overflow: hidden;
+}
+
+.contenedor-foto {
+  display: flex;
+  align-items: center;      /* Centrado vertical */
+  justify-content: center;  /* Centrado horizontal */
+}
+
+.contenedor-foto img {
+  object-position: top center;
+  display: block;
+  max-width: 80%;
+  transform-origin: top center; /* ← esto es la clave */
+}
+
+.contenedor-aboutme {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contenedor-audio {
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  padding: 0rem;
+}
+
+.bloque-audiotitulo {
+  display: inline-block; /* Toma solo el ancho del contenido más ancho (el audio) */
+  text-align: right;     /* Para alinear el h3 al borde derecho del bloque */
+  width: 100%
+}
+
 .imagen-microfono {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%) translateY(49.5%) scale(1.15);
+  transform: translateX(-50%) translateY(52.85%) scale(0.5);
 }
 
 /* General text defaults */
@@ -117,11 +176,10 @@ h1 {
   margin: 0;
 }
 
-/* Secciones principales */
+
 h2 {
-  font-family: 'Righteous', cursive;
-  font-size: 130pt;
-  color: inherit;
+  font-family: 'Righteous';
+  font-size: 80pt;
   margin: 0;
 }
 
@@ -129,16 +187,17 @@ h2 {
 h3 {
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 400; /* regular */
-  font-size: 50pt;
+  font-size: 20pt;
   color: inherit;
   margin: 0;
+  text-align: right;
 }
 
 /* Texto normal */
 p, span, li {
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 400;
-  font-size: 36pt;
+  font-size: 18pt;
   color: inherit;
 }
 
@@ -152,3 +211,69 @@ p, span, li {
   margin: 0;
 }
 
+.plyr {
+  font-family: 'Libre Franklin', sans-serif !important;
+  width: 100%;
+}
+
+/* Fondo de la caja que contiene controles con bordes semicirculares */
+.plyr__controls {
+  background-color: #92472C !important;  /* marrón rojizo */
+  border-radius: 9999px !important;/* hace semicirculos en los laterales */
+}
+
+/* Color del botón play y demás controles */
+.plyr__control {
+  color: #F5DEB3 !important;  /* beige */
+  fill: #F5DEB3 !important;
+  stroke: #F5DEB3 !important;
+}
+
+/* Barra de progreso */
+.plyr__progress input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #F5DEB3 !important; /* beige */
+}
+.plyr__progress input[type="range"]::-moz-range-track {
+  background-color: #F5DEB3 !important;
+}
+
+/* Color del tiempo actual */
+.plyr__time {
+  color: #F5DEB3 !important;  /* beige */
+}
+
+.plyr--audio .plyr__progress input[type='range']::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    #9E8E74 0%,
+    #9E8E74 var(--value, 0%),
+    #F5DEB3 var(--value, 0%),
+    #F5DEB3 100%
+  );
+}
+
+.plyr--audio .plyr__controls > button.plyr__control[data-plyr="play"] {
+  margin-left: 1rem; /* o prueba con 2rem, 3rem... según lo que necesites */
+}
+
+.plyr--audio .plyr__control[data-plyr="play"]:hover {
+  color: #FFDAB9 !important;       /* beige claro, puedes cambiar por el que quieras */
+  background-color: #A94E30 !important; /* marrón rojizo más oscuro para el fondo */
+  border-radius: 50%;              /* opcional, para que tenga forma circular */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.plyr--audio .plyr__progress {
+  margin-right: 40px; /* Ajusta este valor según lo que necesites */
+  margin-left: 20px;
+}
+
+.plyr--audio .plyr__time--current {
+  margin-right: 20px;
+}
+
+/* Elimina el espacio sobrante entre la barra y el tiempo */
+.plyr--audio .plyr__controls {
+  justify-content: flex-start; /* Asegura que todo esté al inicio */
+  gap: 0.5rem; /* Controla el espacio entre elementos */
+}

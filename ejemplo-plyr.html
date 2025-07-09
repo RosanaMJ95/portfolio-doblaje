@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reproductor Plyr Rojo</title>
+  
+  <!-- Plyr CSS -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
+  <!-- Fuente Libre Franklin -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet" />
+
+  <style>
+ /* Aplica la fuente Libre Franklin al reproductor */
+.plyr {
+  font-family: 'Libre Franklin', sans-serif !important;
+}
+
+/* Fondo de la caja que contiene controles con bordes semicirculares */
+.plyr__controls {
+  background-color: #8B0000 !important;  /* marrón rojizo */
+  border-radius: 9999px !important;/* hace semicirculos en los laterales */
+}
+
+/* Color del botón play y demás controles */
+.plyr__control {
+  color: #F5DEB3 !important;  /* beige */
+  fill: #F5DEB3 !important;
+  stroke: #F5DEB3 !important;
+}
+
+/* Barra de progreso */
+.plyr__progress input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #F5DEB3 !important; /* beige */
+}
+.plyr__progress input[type="range"]::-moz-range-track {
+  background-color: #F5DEB3 !important;
+}
+
+/* Color del tiempo actual */
+.plyr__time {
+  color: #F5DEB3 !important;  /* beige */
+}
+
+
+  </style>
+</head>
+<body>
+
+  <audio class="plyr" controls>
+    <source src="media/audio/prueba.mp3" type="audio/mp3" />
+    Tu navegador no soporta el audio HTML5.
+  </audio>
+
+  <!-- Plyr JS -->
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  <script>
+    const players = Plyr.setup('.plyr');
+  </script>
+</body>
+</html>

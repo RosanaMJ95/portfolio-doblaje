@@ -1,13 +1,12 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rosana Muñoz Jiménez – Locutora</title>
   <meta name="description" content="Locutora y actriz de doblaje profesional con voz fresca y versátil. Escucha demos y contacta a Rosana Muñoz Jiménez.">
-  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="icon" type="image/png" href="img/favicon.ico" />
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 </head>
 
 <body>
@@ -39,6 +38,38 @@
         <img src="img/microphoneVintage.png" alt="Microfono clasico" class="imagen-microfono">
       </div>
     </div>
+    <div class="contenedor1b">
+      <h2>about me</h2>
+      <div class="contenedor-foto">
+        <img src="img/photo.jpg" alt="Rosana Muñoz Jiménez en el estudio de grabación">
+      </div>
+      <div class="contenedor-aboutme">
+        <div class="contenedor3">
+          <p>Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí </p>
+        </div>
+        <div class="contenedor-audio">
+          <div class="bloque-audiotitulo">
+            <audio class="plyr-audio" controls>
+              <source src="media/audio/prueba.mp3" type="audio/mp3" />
+              Tu navegador no soporta el audio HTML5.
+            </audio>
+            <h3>demo general</h3>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <div class="contenedor3">
+      <h2>demos</h2>
+      fejofjeofejo
+  </div>
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    Plyr.setup('.plyr-audio', {
+      controls: ['play', 'progress', 'current-time'], // Sin settings ni download
+    });
+  });
+</script>
 </body>
 </html>
