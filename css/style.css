@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,400&family=Righteous&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
 .contenedor1 {
   background-color: #F6EFE1; /* Beige */
   color: #9E8E74;      /* Marrón */
@@ -277,3 +287,117 @@ p, span, li {
   justify-content: flex-start; /* Asegura que todo esté al inicio */
   gap: 0.5rem; /* Controla el espacio entre elementos */
 }
+
+@media (max-width: 480px) {
+  .contenedor1 {
+    width: 100%;
+    padding: 1rem;
+    padding-top: 5rem;
+  }
+
+  .nombre{
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .apellidos{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 0
+  }
+
+  h1 {
+    line-height: 0.3;
+    margin: 0;
+    padding: 0;
+  }
+
+  .profesion{
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .contenedor2 {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .contenedor-derecho {
+    display: none;
+  }
+
+  .contenedor-izquierdo {
+    flex: 1;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .contenedor-redes .redes {
+    display: none;
+  } 
+
+  .contenedor-redes{
+    padding-top: 30px;
+    padding-bottom: 10px;
+  } 
+
+  h2{
+    font-size: 40px;
+  }
+
+  .contenedor1b h2{
+    right: 3px;
+    padding-top: 58px;
+  }
+
+  .contenedor-foto img{
+    display: none;
+  }
+
+  .contenedor-foto{
+    flex: none;
+  }
+
+  .contenedor3{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .plyr--audio .plyr__progress {
+  margin-right: 10px;
+  margin-left: -5px;
+  }
+
+  .bloque-audiotitulo h3{
+    font-size: 20px
+  }
+  .contenedor3.contendor-divisor{
+    background-color: #9E8E74;
+    height: 10px;
+  }
+  .contenedor-divisor h2{
+    left: 5px;
+    margin-top: 33px;
+    color: #9E8E74
+  }
+
+  
+}
+
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+  /* aquí es donde ya estás: portátiles */
+}
+
+@media (min-width: 1280px) {
+  /* pantallas de escritorio grandes */
+}
+
