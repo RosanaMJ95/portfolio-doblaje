@@ -12,6 +12,11 @@
 <body>
   <!-- Contenido sobre la imagen de fondo -->
   <div class="contenedor1">
+    <div class="menu-navegacion">
+      <button onclick="document.getElementById('aboutme').scrollIntoView({ behavior: 'smooth' })">about me</button>
+      <button onclick="document.getElementById('demos').scrollIntoView({ behavior: 'smooth' })">demos</button>
+      <button onclick="document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' })">contacto</button>
+    </div>
     <div class="contenedor2">
       <div class="contenedor-izquierdo">
         <h1>
@@ -39,7 +44,7 @@
       </div>
     </div>
     <div class="contenedor1b">
-      <h2>about me</h2>
+      <h2  id="aboutme">about me</h2>
       <div class="contenedor-foto">
         <img src="img/photo.jpg" alt="Rosana Muñoz Jiménez en el estudio de grabación">
       </div>
@@ -60,8 +65,91 @@
     </div>
   </div>
   <div class="contenedor3">
-      <h2>demos</h2>
-      fejofjeofejo
+      <h2  id="demos">demos</h2>
+      <div class="contenedor-divisor"></div>
+        <div class="bloque-demos">
+          <div class="bloque-audiotitulo">
+            <audio class="plyr-audio" controls>
+              <source src="media/audio/prueba.mp3" type="audio/mp3" />
+              Tu navegador no soporta el audio HTML5.
+            </audio>
+            <h3>publicidad</h3>
+          </div>
+
+          <div class="bloque-audiotitulo">
+            <audio class="plyr-audio" controls>
+              <source src="media/audio/prueba.mp3" type="audio/mp3" />
+              Tu navegador no soporta el audio HTML5.
+            </audio>
+            <h3>documental</h3>
+          </div>
+
+          <div class="bloque-audiotitulo">
+            <audio class="plyr-audio" controls>
+              <source src="media/audio/prueba.mp3" type="audio/mp3" />
+              Tu navegador no soporta el audio HTML5.
+            </audio>
+            <h3>educativo</h3>
+          </div>
+
+          <div class="bloque-audiotitulo">
+            <audio class="plyr-audio" controls>
+              <source src="media/audio/prueba.mp3" type="audio/mp3" />
+              Tu navegador no soporta el audio HTML5.
+            </audio>
+            <h3>audiolibro</h3>
+          </div>
+
+          <div class="bloque-video">
+            <div class="fondo-marron"></div>
+            <video class="plyr-video" controls>
+              <source src="media/video/prueba.mp4" type="video/mp4" />
+              Tu navegador no soporta video HTML5.
+            </video>
+            <h3>demo doblaje</h3>
+          </div>
+
+          <div class="bloque-video">
+            <div class="fondo-marron"></div>
+            <video class="plyr-video" controls>
+              <source src="media/video/prueba.mp4" type="video/mp4" />
+              Tu navegador no soporta video HTML5.
+            </video>
+            <h3>demo doblaje</h3>
+          </div>
+
+      
+          <!-- Agregar más demos aquí -->
+        </div>
+  </div>
+  <div class="contenedor4">
+    <h2  id="contacto">contacto</h2>
+    <div class="contenedor-formulario">
+      <form action="https://formspree.io/f/xwpbgdzj" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+    <div class="contenedor-datos">
+      <p>rosanamj95@gmail.com</p>
+      
+      <div class="contenedor-redes">
+        <div class="columna-red">
+            <img src="img/microphone.png" alt="Instagram" width="10">
+            <span class="redes">@rosana_voice</span>
+          </div>
+          <div class="columna-red">
+            <img src="img/microphone.png" alt="Twitter" width="10">
+            <span class="redes">@rosana_voice</span>
+          </div>
+          <div class="columna-red">
+            <img src="img/microphone.png" alt="LinkedIn" width="10">
+            <span class="redes">Rosana Muñoz</span>
+          </div>
+      </div>
+    </div>
   </div>
 <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
 <script>

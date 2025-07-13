@@ -221,6 +221,24 @@ p, span, li {
   margin: 0;
 }
 
+.contenedor-formulario,
+.contenedor-formulario input,
+.contenedor-formulario textarea,
+.contenedor-formulario button,
+.contenedor-formulario input::placeholder,
+.contenedor-formulario textarea::placeholder {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 14pt;
+  color: #F6EFE1;
+}
+
+.contenedor-datos p {
+  font-size: 14pt;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+
 .plyr {
   font-family: 'Libre Franklin', sans-serif !important;
   width: 100%;
@@ -234,22 +252,22 @@ p, span, li {
 
 /* Color del botón play y demás controles */
 .plyr__control {
-  color: #F5DEB3 !important;  /* beige */
-  fill: #F5DEB3 !important;
-  stroke: #F5DEB3 !important;
+  color: #F6EFE1 !important;  /* beige */
+  fill: #F6EFE1 !important;
+  stroke: #F6EFE1 !important;
 }
 
 /* Barra de progreso */
 .plyr__progress input[type="range"]::-webkit-slider-runnable-track {
-  background-color: #F5DEB3 !important; /* beige */
+  background-color: #F6EFE1 !important; /* beige */
 }
 .plyr__progress input[type="range"]::-moz-range-track {
-  background-color: #F5DEB3 !important;
+  background-color: #F6EFE1 !important;
 }
 
 /* Color del tiempo actual */
 .plyr__time {
-  color: #F5DEB3 !important;  /* beige */
+  color: #F6EFE1 !important;  /* beige */
 }
 
 .plyr--audio .plyr__progress input[type='range']::-webkit-slider-runnable-track {
@@ -257,8 +275,8 @@ p, span, li {
     to right,
     #9E8E74 0%,
     #9E8E74 var(--value, 0%),
-    #F5DEB3 var(--value, 0%),
-    #F5DEB3 100%
+    #F6EFE1 var(--value, 0%),
+    #F6EFE1 100%
   );
 }
 
@@ -267,7 +285,7 @@ p, span, li {
 }
 
 .plyr--audio .plyr__control[data-plyr="play"]:hover {
-  color: #FFDAB9 !important;       /* beige claro, puedes cambiar por el que quieras */
+  color: #F6EFE1 !important;       /* beige claro, puedes cambiar por el que quieras */
   background-color: #A94E30 !important; /* marrón rojizo más oscuro para el fondo */
   border-radius: 50%;              /* opcional, para que tenga forma circular */
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -287,6 +305,58 @@ p, span, li {
   justify-content: flex-start; /* Asegura que todo esté al inicio */
   gap: 0.5rem; /* Controla el espacio entre elementos */
 }
+
+.bloque-video {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.bloque-video video {
+  width: 100%;
+  display: block;
+  z-index: 2;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* El fondo marrón que aparece detrás */
+.fondo-marron {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  background-color: #92472C; /* Marrón */
+  border-radius: 12px;
+  z-index: 10;
+}
+
+.menu-navegacion {
+  position: absolute;
+  top: 1.5rem;
+  z-index: 999;
+  display: flex;
+  gap: 2rem;
+}
+
+.menu-navegacion button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 10pt;
+  color: #9E8E74; 
+  cursor: pointer;
+  transition: color 0.3s ease;
+  justify-content: space-between;
+}
+
+.menu-navegacion button:hover {
+  color: #594f3f;
+}
+
+
 
 @media (max-width: 480px) {
   .contenedor1 {
@@ -369,19 +439,106 @@ p, span, li {
   }
 
   .bloque-audiotitulo h3{
-    font-size: 20px
+    font-size: 20px;
+    margin-bottom: 40
   }
-  .contenedor3.contendor-divisor{
-    background-color: #9E8E74;
-    height: 10px;
-  }
-  .contenedor-divisor h2{
-    left: 5px;
-    margin-top: 33px;
-    color: #9E8E74
+  
+  .contenedor3 h2{
+    left: 5;
+    top: -38;
+    color: #92472C
   }
 
-  
+  .contenedor-divisor{
+    background-color: #92472C;
+    height: 10;
+    margin-top: -30;
+    margin-bottom: 50
+  }
+
+  .bloque-demos {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .fondo-marron {
+    bottom: -10px;
+    right: -10px;
+  }
+
+  .fondo-marron{
+    display: none;
+  }
+
+  .bloque-video h3 {
+  display: inline-block; /* Toma solo el ancho del contenido más ancho (el audio) */
+  text-align: right;     /* Para alinear el h3 al borde derecho del bloque */
+  width: 100%;
+  font-size: 20;
+  margin-bottom: 40;
+  }
+
+  .contenedor4 {
+  margin-top: -30px;
+  position: relative; /* Para que el h2 se posicione relativo a este contenedor */
+  z-index: 1;
+  display: flex;
+  flex-direction: column; /* apila los hijos en columna */
+  height: auto; /* o ponle una altura fija si lo necesitas */
+  width: 100%;
+  }
+
+  .contenedor4 h2 {
+    position: absolute;
+    left: 5px;
+    top: -38px;
+    color: #92472C;
+    z-index: 10; /* Asegura que esté por encima */
+  }
+
+  .contenedor-formulario,
+  .contenedor-datos {
+    flex: 1; /* que cada sección ocupe el mismo espacio vertical */
+    padding: 1rem; /* opcional, para espaciado interno */
+  }
+
+  .contenedor-formulario {
+    background-color: #F6EFE1;
+    margin: 5%;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: 'Libre Franklin', sans-serif;
+    margin-top: 10%;
+    padding-bottom: 0;
+  }
+
+  .contenedor-formulario form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contenedor-formulario input,
+  .contenedor-formulario textarea {
+    background-color: #9E8E74;
+    border: none;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+  }
+
+  .contenedor-formulario textarea {
+    min-height: 120px;
+    margin-top: 1.5rem; /* separación extra para expresar "hablar" */
+  }
+
+  .contenedor-formulario button {
+    background-color: #92472C;
+    padding: 0.4rem 0.8rem;  /* más pequeño */
+    border: none;
+    cursor: pointer;
+    align-self: flex-end;  /* lo lleva a la derecha del formulario */
+    margin-top: 0.5rem;
+  }
+
 }
 
 
