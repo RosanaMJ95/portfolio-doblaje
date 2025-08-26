@@ -15,7 +15,6 @@ html, body {
   color: #9E8E74;      /* Marrón */
   padding: 2rem;
   padding-top: 10rem;
-  padding-bottom: 0;
 }
 
 .contenedor1b {
@@ -358,11 +357,12 @@ p, span, li {
 
 
 
-@media (max-width: 480px) {
+@media (max-width: 619px) {
   .contenedor1 {
     width: 100%;
     padding: 1rem;
     padding-top: 5rem;
+    padding-bottom: 0;
   }
 
   .nombre{
@@ -430,7 +430,7 @@ p, span, li {
 
   .contenedor3{
     margin-top: 30px;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
   }
 
   .plyr--audio .plyr__progress {
@@ -490,7 +490,7 @@ p, span, li {
 
   .contenedor4 h2 {
     position: absolute;
-    left: 5px;
+    left: 20px;
     top: -38px;
     color: #92472C;
     z-index: 10; /* Asegura que esté por encima */
@@ -541,20 +541,572 @@ p, span, li {
 
 }
 
+@media (min-width: 620px) {
 
-@media (min-width: 480px) {
+  .nombre{
+    font-size: 50px;
+    text-align: center;
+  }
 
+  .apellidos{
+    font-size: 25px;
+    text-align: center;
+  }
+
+  h1 {
+    line-height: 0.3;
+  }
+
+  .profesion{
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .contenedor-derecho img{
+    width: 950px;
+    position: absolute;
+    bottom: 50px;
+  }
+
+  .contenedor-redes .redes {
+    display: none;
+  } 
+
+  .contenedor-redes{
+    padding-top: 30px;
+    padding-bottom: 10px;
+  } 
+
+  h2{
+    font-size: 60px;
+  }
+
+  .contenedor1b h2{
+    right: 40px;
+    padding-top: 40px;
+  }
+
+  .contenedor-foto{
+    align-items: top;
+  }
+
+  .contenedor3{
+    margin-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .plyr--audio .plyr__progress {
+  margin-right: 10px;
+  margin-left: -5px;
+  }
+
+  .bloque-audiotitulo h3{
+    font-size: 20px;
+    margin-bottom: 40
+  }
+  
+  .contenedor3 h2{
+    left: 80px;
+    top: -55px;
+    color: #92472C
+  }
+
+  .contenedor-divisor{
+    background-color: #92472C;
+    height: 10;
+    margin-top: -30;
+    margin-bottom: 60
+  }
+
+  .bloque-demos {
+    padding: 2rem;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .fondo-marron {
+    bottom: -10px;
+    right: -10px;
+  }
+
+  .fondo-marron{
+    display: none; 
+  }
+
+  .bloque-video h3 {
+  display: inline-block; /* Toma solo el ancho del contenido más ancho (el audio) */
+  text-align: right;     /* Para alinear el h3 al borde derecho del bloque */
+  width: 100%;
+  font-size: 20;
+  margin-bottom: 40;
+  }
+
+  .contenedor4 {
+  margin-top: -10px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  height: auto;
+  width: 100%;
+  }
+
+  .contenedor4 h2 {
+    position: absolute;
+    left: 50px;
+    top: -55px;
+    color: #92472C;
+  }
+
+  .contenedor-formulario,
+  .contenedor-datos {
+    flex: 1; /* que cada sección ocupe el mismo espacio vertical */
+    padding: 1rem; /* opcional, para espaciado interno */
+  }
+
+  .contenedor-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 40px
+  }
+
+  .datos-texto{
+    flex: 1;
+    max-height: 25%;
+    display: flex;
+    flex-direction: column; /* en columna para poder alinear */
+    justify-content: flex-end; /* empuja el texto hacia el bottom */
+    height: 100%; /* asegura que ocupe todo el alto del contenedor */
+  }
+
+  .contenedor-datos .contenedor-redes{
+    flex: 3;
+    display: flex;
+    flex-direction: column;     /* asegúrate de que esté en fila */
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;         /* por si no cabe todo, pasen a la siguiente línea */
+    width: 100%;             /* que ocupe todo el ancho disponible */
+    gap: 10px;
+    padding-top: 0px;
+  }
+
+  .contenedor-datos .columna-red {
+    display: flex;
+    align-items: baseline; /* clave para alinear texto con ícono más pequeño */
+    gap: 16px;
+    color: inherit;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 100;
+    font-size: 36pt;
+  }
+
+  .contenedor-datos .contenedor-redes .redes {
+    display: inline; /* o block según tu preferencia */
+  }
+
+  .contenedor-datos .columna-red img {
+    height: 20px;
+    width: auto;
+    display: inline-block; /* esto es importante para baseline */
+  }
+
+  .contenedor-formulario {
+    background-color: #F6EFE1;
+    margin: 5%;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: 'Libre Franklin', sans-serif;
+    padding-bottom: 0;
+  }
+  
+
+  .contenedor-formulario form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contenedor-formulario input,
+  .contenedor-formulario textarea {
+    background-color: #9E8E74;
+    border: none;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+  }
+
+  .contenedor-formulario textarea {
+    min-height: 120px;
+    margin-top: 1.5rem; /* separación extra para expresar "hablar" */
+  }
+
+  .contenedor-formulario button {
+    background-color: #92472C;
+    padding: 0.4rem 0.8rem;  /* más pequeño */
+    border: none;
+    cursor: pointer;
+    align-self: flex-end;  /* lo lleva a la derecha del formulario */
+    margin-top: 0.5rem;
+  }
+
+  .menu-navegacion button {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20pt;
+    color: #9E8E74; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+    justify-content: space-between;
+  }
+
+  
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) and (max-width: 989px) {
+  .nombre {
+    font-size: 60pt;
+  }
 
+  .apellidos {
+    font-size: 30pt;
+  }
+
+  h1 {
+    line-height: 0.4;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contenedor-derecho img{
+    width: 1000px;
+    position: absolute;
+    bottom: 30px;
+  }
+  
+}
+
+@media (min-width: 990px) and (max-width: 1023px){
+
+  .contenedor2 {
+    padding-bottom: 0;
+  }
+  .nombre {
+    font-size: 80pt;
+  }
+
+  .apellidos {
+    font-size: 40pt;
+  }
+
+  h1 {
+    line-height: 0.4;
+    margin: 0;
+    padding: 0;
+  }
+
+  .profesion {
+    font-size: 15pt;
+  }
+
+  .contenedor-derecho img{
+    width: 1100px;
+    position: absolute;
+    bottom: 30px;
+  }
+
+  .contenedor-redes .redes {
+    display: none;
+  } 
+
+  .contenedor-redes{
+    padding-top: 30px;
+    padding-bottom: 10px;
+  } 
+
+  h2{
+    font-size: 60px;
+  }
+
+  .contenedor1b h2{
+    right: 40px;
+    padding-top: 40px;
+  }
+
+  .contenedor-foto{
+    align-items: top;
+  }
+
+  .contenedor3{
+    margin-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .plyr--audio .plyr__progress {
+  margin-right: 10px;
+  margin-left: -5px;
+  }
+
+  .bloque-audiotitulo h3{
+    font-size: 20px;
+    margin-bottom: 40
+  }
+  
+  .contenedor3 h2{
+    left: 80px;
+    top: -55px;
+    color: #92472C
+  }
+
+  .contenedor-divisor{
+    background-color: #92472C;
+    height: 10;
+    margin-top: -30;
+    margin-bottom: 60
+  }
+
+  .bloque-demos {
+    padding: 2rem;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .fondo-marron {
+    bottom: -10px;
+    right: -10px;
+  }
+
+  .fondo-marron{
+    display: none; 
+  }
+
+  .bloque-video h3 {
+  display: inline-block; /* Toma solo el ancho del contenido más ancho (el audio) */
+  text-align: right;     /* Para alinear el h3 al borde derecho del bloque */
+  width: 100%;
+  font-size: 20;
+  margin-bottom: 40;
+  }
+
+  .contenedor4 {
+  margin-top: -10px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  height: auto;
+  width: 100%;
+  }
+
+  .contenedor4 h2 {
+    position: absolute;
+    left: 50px;
+    top: -55px;
+    color: #92472C;
+  }
+
+  .contenedor-formulario,
+  .contenedor-datos {
+    flex: 1; /* que cada sección ocupe el mismo espacio vertical */
+    padding: 1rem; /* opcional, para espaciado interno */
+  }
+
+  .contenedor-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 40px
+  }
+
+  .datos-texto{
+    flex: 1;
+    max-height: 25%;
+    display: flex;
+    flex-direction: column; /* en columna para poder alinear */
+    justify-content: flex-end; /* empuja el texto hacia el bottom */
+    height: 100%; /* asegura que ocupe todo el alto del contenedor */
+  }
+
+  .contenedor-datos .contenedor-redes{
+    flex: 3;
+    display: flex;
+    flex-direction: column;     /* asegúrate de que esté en fila */
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;         /* por si no cabe todo, pasen a la siguiente línea */
+    width: 100%;             /* que ocupe todo el ancho disponible */
+    gap: 10px;
+    padding-top: 0px;
+  }
+
+  .contenedor-datos .columna-red {
+    display: flex;
+    align-items: baseline; /* clave para alinear texto con ícono más pequeño */
+    gap: 16px;
+    color: inherit;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 100;
+    font-size: 36pt;
+  }
+
+  .contenedor-datos .contenedor-redes .redes {
+    display: inline; /* o block según tu preferencia */
+  }
+
+  .contenedor-datos .columna-red img {
+    height: 20px;
+    width: auto;
+    display: inline-block; /* esto es importante para baseline */
+  }
+
+  .contenedor-formulario {
+    background-color: #F6EFE1;
+    margin: 5%;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: 'Libre Franklin', sans-serif;
+    padding-bottom: 0;
+  }
+  
+
+  .contenedor-formulario form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contenedor-formulario input,
+  .contenedor-formulario textarea {
+    background-color: #9E8E74;
+    border: none;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+  }
+
+  .contenedor-formulario textarea {
+    min-height: 120px;
+    margin-top: 1.5rem; /* separación extra para expresar "hablar" */
+  }
+
+  .contenedor-formulario button {
+    background-color: #92472C;
+    padding: 0.4rem 0.8rem;  /* más pequeño */
+    border: none;
+    cursor: pointer;
+    align-self: flex-end;  /* lo lleva a la derecha del formulario */
+    margin-top: 0.5rem;
+  }
+
+  .menu-navegacion button {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20pt;
+    color: #9E8E74; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+    justify-content: space-between;
+  }
 }
 
 @media (min-width: 1024px) {
-  /* aquí es donde ya estás: portátiles */
-}
 
-@media (min-width: 1280px) {
-  /* pantallas de escritorio grandes */
-}
+  .contenedor1 {
+    padding-bottom: 80px;
+  }
+
+  .nombre{
+    font-size: 100px;
+    text-align: center;
+  }
+
+  .apellidos{
+    font-size: 50px;
+    text-align: center;
+  }
+
+  h1 {
+    line-height: 0.4;
+  }
+
+  .profesion{
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .contenedor-redes{
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
+  .contenedor-derecho img{
+    width: 1100px;
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .menu-navegacion button {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 25pt;
+    color: #9E8E74; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+    justify-content: space-between;
+  }
+
+  h2 {
+    font-size: 80px;
+  }
+
+  .contenedor1b h2{
+    right: 40px;
+    padding-top: 21px;
+  }
+
+  .contenedor3 h2{
+    left: 100px;
+    top: -75px;
+    color: #92472C
+  }
+
+  .contenedor-divisor{
+    background-color: #92472C;
+    height: 10;
+    margin-top: -30;
+    margin-bottom: 60
+  }
+
+  .bloque-demos {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .contenedor4 h2 {
+    position: absolute;
+    left: 80px;
+    top: -71px;
+    color: #92472C;
+  }
+
+  .contenedor-datos .contenedor-redes{
+    flex: 3;
+    display: flex;
+    flex-direction: column;     /* asegúrate de que esté en fila */
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;         /* por si no cabe todo, pasen a la siguiente línea */
+    width: 100%;             /* que ocupe todo el ancho disponible */
+    gap: 10px;
+    padding-top: 0px;
+  }
+
+} 
 
