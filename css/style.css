@@ -371,7 +371,7 @@ p, span, li {
 .contenedor3 p{
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 400;
-  font-size: 14pt;
+  font-size: 16pt;
   color: inherit;
   padding-bottom:0;
   margin-left: 24px;
@@ -453,7 +453,6 @@ p, span, li {
 
   .contenedor3{
     margin-top: 30px;
-    padding-bottom: 30px;
   }
 
   .plyr--audio .plyr__progress {
@@ -618,7 +617,6 @@ p, span, li {
 
   .contenedor3{
     margin-top: 30px;
-    padding-bottom: 30px;
   }
 
   .plyr--audio .plyr__progress {
@@ -871,7 +869,6 @@ p, span, li {
 
   .contenedor3{
     margin-top: 30px;
-    padding-bottom: 30px;
   }
 
   .plyr--audio .plyr__progress {
