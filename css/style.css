@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,400&family=Righteous&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
 .contenedor1 {
   background-color: #F6EFE1; /* Beige */
   color: #9E8E74;      /* Marrón */
   padding: 2rem;
   padding-top: 10rem;
-  padding-bottom: 0;
 }
 
 .contenedor1b {
@@ -211,6 +220,24 @@ p, span, li {
   margin: 0;
 }
 
+.contenedor-formulario,
+.contenedor-formulario input,
+.contenedor-formulario textarea,
+.contenedor-formulario button,
+.contenedor-formulario input::placeholder,
+.contenedor-formulario textarea::placeholder {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 14pt;
+  color: #F6EFE1;
+}
+
+.contenedor-datos p {
+  font-size: 14pt;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+
 .plyr {
   font-family: 'Libre Franklin', sans-serif !important;
   width: 100%;
@@ -224,22 +251,22 @@ p, span, li {
 
 /* Color del botón play y demás controles */
 .plyr__control {
-  color: #F5DEB3 !important;  /* beige */
-  fill: #F5DEB3 !important;
-  stroke: #F5DEB3 !important;
+  color: #F6EFE1 !important;  /* beige */
+  fill: #F6EFE1 !important;
+  stroke: #F6EFE1 !important;
 }
 
 /* Barra de progreso */
 .plyr__progress input[type="range"]::-webkit-slider-runnable-track {
-  background-color: #F5DEB3 !important; /* beige */
+  background-color: #F6EFE1 !important; /* beige */
 }
 .plyr__progress input[type="range"]::-moz-range-track {
-  background-color: #F5DEB3 !important;
+  background-color: #F6EFE1 !important;
 }
 
 /* Color del tiempo actual */
 .plyr__time {
-  color: #F5DEB3 !important;  /* beige */
+  color: #F6EFE1 !important;  /* beige */
 }
 
 .plyr--audio .plyr__progress input[type='range']::-webkit-slider-runnable-track {
@@ -247,8 +274,8 @@ p, span, li {
     to right,
     #9E8E74 0%,
     #9E8E74 var(--value, 0%),
-    #F5DEB3 var(--value, 0%),
-    #F5DEB3 100%
+    #F6EFE1 var(--value, 0%),
+    #F6EFE1 100%
   );
 }
 
@@ -257,7 +284,7 @@ p, span, li {
 }
 
 .plyr--audio .plyr__control[data-plyr="play"]:hover {
-  color: #FFDAB9 !important;       /* beige claro, puedes cambiar por el que quieras */
+  color: #F6EFE1 !important;       /* beige claro, puedes cambiar por el que quieras */
   background-color: #A94E30 !important; /* marrón rojizo más oscuro para el fondo */
   border-radius: 50%;              /* opcional, para que tenga forma circular */
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -277,3 +304,837 @@ p, span, li {
   justify-content: flex-start; /* Asegura que todo esté al inicio */
   gap: 0.5rem; /* Controla el espacio entre elementos */
 }
+
+.bloque-video {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.bloque-video video {
+  width: 100%;
+  max-width: 600px;      /* ancho fijo máximo */
+  height: 340px;         /* altura fija */
+  object-fit: cover;
+  display: block;
+  z-index: 2;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* El fondo marrón que aparece detrás */
+.fondo-marron {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  background-color: #92472C; /* Marrón */
+  border-radius: 12px;
+  z-index: 10;
+}
+
+.menu-navegacion {
+  position: absolute;
+  top: 1.5rem;
+  z-index: 999;
+  display: flex;
+  gap: 2rem;
+}
+
+.menu-navegacion button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 10pt;
+  color: #9E8E74; 
+  cursor: pointer;
+  transition: color 0.3s ease;
+  justify-content: space-between;
+}
+
+.menu-navegacion button:hover {
+  color: #594f3f;
+}
+
+.titulo-seccion {
+  grid-column: 1 / -1;      /* ocupa todas las columnas del grid */
+  text-align: center;       /* centrado */
+  font-size: 24pt;          
+  margin: 2rem 0 1rem 0;    /* espacio arriba y abajo */
+  font-weight: 400;          
+  color: #92472C;           
+}
+
+
+.contenedor3 p{
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 400;
+  font-size: 16pt;
+  color: inherit;
+  padding-bottom:0;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+
+
+@media (max-width: 619px) {
+  .contenedor1 {
+    width: 100%;
+    padding: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 0;
+  }
+
+  .nombre{
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .apellidos{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 0
+  }
+
+  h1 {
+    line-height: 0.3;
+    margin: 0;
+    padding: 0;
+  }
+
+  .profesion{
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .contenedor2 {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .contenedor-derecho {
+    display: none;
+  }
+
+  .contenedor-izquierdo {
+    flex: 1;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .contenedor-redes .redes {
+    display: none;
+  } 
+
+  .contenedor-redes{
+    padding-top: 30px;
+    padding-bottom: 10px;
+  } 
+
+  h2{
+    font-size: 40px;
+  }
+
+  .contenedor1b h2{
+    right: 3px;
+    padding-top: 58px;
+  }
+
+  .contenedor-foto img{
+    display: none;
+  }
+
+  .contenedor-foto{
+    flex: none;
+  }
+
+  .contenedor3{
+    margin-top: 30px;
+  }
+
+  .plyr--audio .plyr__progress {
+  margin-right: 10px;
+  margin-left: -5px;
+  }
+
+  .bloque-audiotitulo h3{
+    font-size: 20px;
+    margin-bottom: 40;
+    padding-top: 10px;
+  }
+  
+  .contenedor3 h2{
+    left: 5;
+    top: -38;
+    color: #92472C
+  }
+
+  .contenedor-divisor{
+    background-color: #92472C;
+    height: 10;
+    margin-top: -30;
+    margin-bottom: 50
+  }
+
+  .bloque-demos {
+    padding: 1rem;
+    gap: 1.5rem;
+    justify-items: center;   /* centra horizontalmente los hijos dentro de cada columna */
+    align-items: start;
+  }
+
+  .fondo-marron {
+    bottom: -10px;
+    right: -10px;
+  }
+
+  .fondo-marron{
+    display: none;
+  }
+
+  .bloque-video h3 {
+  display: inline-block; /* Toma solo el ancho del contenido más ancho (el audio) */
+  text-align: right;     /* Para alinear el h3 al borde derecho del bloque */
+  width: 100%;
+  font-size: 20;
+  margin-bottom: 40;
+  }
+
+  .contenedor4 {
+  margin-top: -30px;
+  position: relative; /* Para que el h2 se posicione relativo a este contenedor */
+  z-index: 1;
+  display: flex;
+  flex-direction: column; /* apila los hijos en columna */
+  height: auto; /* o ponle una altura fija si lo necesitas */
+  width: 100%;
+  }
+
+  .contenedor4 h2 {
+    position: absolute;
+    left: 20px;
+    top: -38px;
+    color: #92472C;
+    z-index: 10; /* Asegura que esté por encima */
+  }
+
+  .contenedor-formulario,
+  .contenedor-datos {
+    flex: 1; /* que cada sección ocupe el mismo espacio vertical */
+    padding: 1rem; /* opcional, para espaciado interno */
+  }
+
+  .contenedor-formulario {
+    background-color: #F6EFE1;
+    margin: 5%;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: 'Libre Franklin', sans-serif;
+    margin-top: 10%;
+    padding-bottom: 0;
+  }
+
+  .contenedor-formulario form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contenedor-formulario input,
+  .contenedor-formulario textarea {
+    background-color: #9E8E74;
+    border: none;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+  }
+
+  .contenedor-formulario textarea {
+    min-height: 120px;
+    margin-top: 1.5rem; /* separación extra para expresar "hablar" */
+  }
+
+  .contenedor-formulario button {
+    background-color: #92472C;
+    padding: 0.4rem 0.8rem;  /* más pequeño */
+    border: none;
+    cursor: pointer;
+    align-self: flex-end;  /* lo lleva a la derecha del formulario */
+    margin-top: 0.5rem;
+  }
+
+}
+
+@media (min-width: 620px) {
+
+  .nombre{
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .apellidos{
+    font-size: 25px;
+    text-align: center;
+  }
+
+  h1 {
+    line-height: 0.3;
+  }
+
+  .profesion{
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .contenedor-derecho img{
+    width: 950px;
+    position: absolute;
+    bottom: 50px;
+  }
+
+  .contenedor-redes .redes {
+    display: none;
+  } 
+
+  .contenedor-redes{
+    padding-top: 30px;
+    padding-bottom: 10px;
+  } 
+
+  h2{
+    font-size: 60px;
+  }
+
+  .contenedor1b h2{
+    right: 40px;
+    padding-top: 40px;
+  }
+
+  .contenedor-foto{
+    align-items: top;
+  }
+
+  .contenedor3{
+    margin-top: 30px;
+  }
+
+  .plyr--audio .plyr__progress {
+  margin-right: 10px;
+  margin-left: -5px;
+  }
+
+  .bloque-audiotitulo h3{
+    font-size: 20px;
+    margin-bottom: 40;
+    padding-top: 10px;
+  }
+  
+  .contenedor3 h2{
+    left: 80px;
+    top: -55px;
+    color: #92472C
+  }
+
+  .contenedor-divisor{
+    background-color: #92472C;
+    height: 10;
+    margin-top: -30;
+    margin-bottom: 60
+  }
+
+  .bloque-demos {
+    padding: 2rem;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;   /* centra horizontalmente los hijos dentro de cada columna */
+    align-items: start;
+  }
+
+  .fondo-marron {
+    bottom: -10px;
+    right: -10px;
+  }
+
+  .fondo-marron{
+    display: none; 
+  }
+
+  .bloque-video h3 {
+  display: inline-block; /* Toma solo el ancho del contenido más ancho (el audio) */
+  text-align: right;     /* Para alinear el h3 al borde derecho del bloque */
+  width: 100%;
+  font-size: 20;
+  margin-bottom: 40;
+  margin-top: 15;
+  }
+
+  .contenedor4 {
+  margin-top: -10px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  height: auto;
+  width: 100%;
+  }
+
+  .contenedor4 h2 {
+    position: absolute;
+    left: 50px;
+    top: -55px;
+    color: #92472C;
+  }
+
+  .contenedor-formulario,
+  .contenedor-datos {
+    flex: 1; /* que cada sección ocupe el mismo espacio vertical */
+    padding: 1rem; /* opcional, para espaciado interno */
+  }
+
+  .contenedor-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 40px
+  }
+
+  .datos-texto{
+    flex: 1;
+    max-height: 25%;
+    display: flex;
+    flex-direction: column; /* en columna para poder alinear */
+    justify-content: flex-end; /* empuja el texto hacia el bottom */
+    height: 100%; /* asegura que ocupe todo el alto del contenedor */
+  }
+
+  .contenedor-datos .contenedor-redes{
+    flex: 3;
+    display: flex;
+    flex-direction: column;     /* asegúrate de que esté en fila */
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;         /* por si no cabe todo, pasen a la siguiente línea */
+    width: 100%;             /* que ocupe todo el ancho disponible */
+    gap: 10px;
+    padding-top: 0px;
+  }
+
+  .contenedor-datos .columna-red {
+    display: flex;
+    align-items: baseline; /* clave para alinear texto con ícono más pequeño */
+    gap: 16px;
+    color: inherit;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 100;
+    font-size: 36pt;
+  }
+
+  .contenedor-datos .contenedor-redes .redes {
+    display: inline; /* o block según tu preferencia */
+  }
+
+  .contenedor-datos .columna-red img {
+    height: 20px;
+    width: auto;
+    display: inline-block; /* esto es importante para baseline */
+  }
+
+  .contenedor-formulario {
+    background-color: #F6EFE1;
+    margin: 5%;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: 'Libre Franklin', sans-serif;
+    padding-bottom: 0;
+  }
+  
+
+  .contenedor-formulario form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contenedor-formulario input,
+  .contenedor-formulario textarea {
+    background-color: #9E8E74;
+    border: none;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+  }
+
+  .contenedor-formulario textarea {
+    min-height: 120px;
+    margin-top: 1.5rem; /* separación extra para expresar "hablar" */
+  }
+
+  .contenedor-formulario button {
+    background-color: #92472C;
+    padding: 0.4rem 0.8rem;  /* más pequeño */
+    border: none;
+    cursor: pointer;
+    align-self: flex-end;  /* lo lleva a la derecha del formulario */
+    margin-top: 0.5rem;
+  }
+
+  .menu-navegacion button {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20pt;
+    color: #9E8E74; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+    justify-content: space-between;
+  }
+
+  
+}
+
+@media (min-width: 800px) and (max-width: 989px) {
+  .nombre {
+    font-size: 60pt;
+  }
+
+  .apellidos {
+    font-size: 30pt;
+  }
+
+  h1 {
+    line-height: 0.4;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contenedor-derecho img{
+    width: 1000px;
+    position: absolute;
+    bottom: 30px;
+  }
+  
+}
+
+@media (min-width: 990px) and (max-width: 1023px){
+
+  .contenedor2 {
+    padding-bottom: 0;
+  }
+  .nombre {
+    font-size: 80pt;
+  }
+
+  .apellidos {
+    font-size: 40pt;
+  }
+
+  h1 {
+    line-height: 0.4;
+    margin: 0;
+    padding: 0;
+  }
+
+  .profesion {
+    font-size: 15pt;
+  }
+
+  .contenedor-derecho img{
+    width: 1100px;
+    position: absolute;
+    bottom: 30px;
+  }
+
+  .contenedor-redes .redes {
+    display: none;
+  } 
+
+  .contenedor-redes{
+    padding-top: 30px;
+    padding-bottom: 10px;
+  } 
+
+  h2{
+    font-size: 60px;
+  }
+
+  .contenedor1b h2{
+    right: 40px;
+    padding-top: 40px;
+  }
+
+  .contenedor-foto{
+    align-items: top;
+  }
+
+  .contenedor3{
+    margin-top: 30px;
+  }
+
+  .plyr--audio .plyr__progress {
+  margin-right: 10px;
+  margin-left: -5px;
+  }
+
+  .bloque-audiotitulo h3{
+    font-size: 20px;
+    margin-bottom: 40;
+    padding-top: 10px;
+  }
+  
+  .contenedor3 h2{
+    left: 80px;
+    top: -55px;
+    color: #92472C
+  }
+
+  .contenedor-divisor{
+    background-color: #92472C;
+    height: 10;
+    margin-top: -30;
+    margin-bottom: 60
+  }
+
+  .bloque-demos {
+    padding: 2rem;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .fondo-marron {
+    bottom: -10px;
+    right: -10px;
+  }
+
+  .fondo-marron{
+    display: none; 
+  }
+
+  .bloque-video h3 {
+  display: inline-block; /* Toma solo el ancho del contenido más ancho (el audio) */
+  text-align: right;     /* Para alinear el h3 al borde derecho del bloque */
+  width: 100%;
+  font-size: 20;
+  margin-bottom: 40;
+  }
+
+  .contenedor4 {
+  margin-top: -10px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  height: auto;
+  width: 100%;
+  }
+
+  .contenedor4 h2 {
+    position: absolute;
+    left: 50px;
+    top: -55px;
+    color: #92472C;
+  }
+
+  .contenedor-formulario,
+  .contenedor-datos {
+    flex: 1; /* que cada sección ocupe el mismo espacio vertical */
+    padding: 1rem; /* opcional, para espaciado interno */
+  }
+
+  .contenedor-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 40px
+  }
+
+  .datos-texto{
+    flex: 1;
+    max-height: 25%;
+    display: flex;
+    flex-direction: column; /* en columna para poder alinear */
+    justify-content: flex-end; /* empuja el texto hacia el bottom */
+    height: 100%; /* asegura que ocupe todo el alto del contenedor */
+  }
+
+  .contenedor-datos .contenedor-redes{
+    flex: 3;
+    display: flex;
+    flex-direction: column;     /* asegúrate de que esté en fila */
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;         /* por si no cabe todo, pasen a la siguiente línea */
+    width: 100%;             /* que ocupe todo el ancho disponible */
+    gap: 10px;
+    padding-top: 0px;
+  }
+
+  .contenedor-datos .columna-red {
+    display: flex;
+    align-items: baseline; /* clave para alinear texto con ícono más pequeño */
+    gap: 16px;
+    color: inherit;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 100;
+    font-size: 36pt;
+  }
+
+  .contenedor-datos .contenedor-redes .redes {
+    display: inline; /* o block según tu preferencia */
+  }
+
+  .contenedor-datos .columna-red img {
+    height: 20px;
+    width: auto;
+    display: inline-block; /* esto es importante para baseline */
+  }
+
+  .contenedor-formulario {
+    background-color: #F6EFE1;
+    margin: 5%;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: 'Libre Franklin', sans-serif;
+    padding-bottom: 0;
+  }
+  
+
+  .contenedor-formulario form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contenedor-formulario input,
+  .contenedor-formulario textarea {
+    background-color: #9E8E74;
+    border: none;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+  }
+
+  .contenedor-formulario textarea {
+    min-height: 120px;
+    margin-top: 1.5rem; /* separación extra para expresar "hablar" */
+  }
+
+  .contenedor-formulario button {
+    background-color: #92472C;
+    padding: 0.4rem 0.8rem;  /* más pequeño */
+    border: none;
+    cursor: pointer;
+    align-self: flex-end;  /* lo lleva a la derecha del formulario */
+    margin-top: 0.5rem;
+  }
+
+  .menu-navegacion button {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20pt;
+    color: #9E8E74; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .contenedor1 {
+    padding-bottom: 80px;
+  }
+
+  .nombre{
+    font-size: 100px;
+    text-align: center;
+  }
+
+  .apellidos{
+    font-size: 50px;
+    text-align: center;
+  }
+
+  h1 {
+    line-height: 0.4;
+  }
+
+  .profesion{
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .contenedor-redes{
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
+  .contenedor-derecho img{
+    width: 1100px;
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .menu-navegacion button {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 25pt;
+    color: #9E8E74; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+    justify-content: space-between;
+  }
+
+  h2 {
+    font-size: 80px;
+  }
+
+  .contenedor1b h2{
+    right: 40px;
+    padding-top: 21px;
+  }
+
+  .contenedor3 h2{
+    left: 100px;
+    top: -75px;
+    color: #92472C
+  }
+
+  .contenedor-divisor{
+    background-color: #92472C;
+    height: 10;
+    margin-top: -30;
+    margin-bottom: 60
+  }
+
+  .bloque-demos {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+  }
+
+  .contenedor4 h2 {
+    position: absolute;
+    left: 80px;
+    top: -71px;
+    color: #92472C;
+  }
+
+  .contenedor-datos .contenedor-redes{
+    flex: 3;
+    display: flex;
+    flex-direction: column;     /* asegúrate de que esté en fila */
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;         /* por si no cabe todo, pasen a la siguiente línea */
+    width: 100%;             /* que ocupe todo el ancho disponible */
+    gap: 10px;
+    padding-top: 0px;
+  }
+
+} 
+

@@ -12,6 +12,11 @@
 <body>
   <!-- Contenido sobre la imagen de fondo -->
   <div class="contenedor1">
+    <div class="menu-navegacion">
+      <button onclick="document.getElementById('aboutme').scrollIntoView({ behavior: 'smooth' })">about me</button>
+      <button onclick="document.getElementById('demos').scrollIntoView({ behavior: 'smooth' })">demos</button>
+      <button onclick="document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' })">contacto</button>
+    </div>
     <div class="contenedor2">
       <div class="contenedor-izquierdo">
         <h1>
@@ -39,18 +44,18 @@
       </div>
     </div>
     <div class="contenedor1b">
-      <h2>about me</h2>
+      <h2  id="aboutme">about me</h2>
       <div class="contenedor-foto">
         <img src="img/photo.jpg" alt="Rosana Muñoz Jiménez en el estudio de grabación">
       </div>
       <div class="contenedor-aboutme">
         <div class="contenedor3">
-          <p>Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí Sobre mí </p>
+          <p>Soy Rosana Muñoz Jiménez, y mi voz es mi herramienta para conectar y emocionar. Alegre, fresca y juvenil, disfruto dando vida a cada guión, creando personajes y transmitiendo sensaciones con pasión y energía. Puedo aportar diversión y entusiasmo, o intensidad y profesionalidad, según lo que el proyecto demande.</p>
         </div>
         <div class="contenedor-audio">
           <div class="bloque-audiotitulo">
-            <audio class="plyr-audio" controls>
-              <source src="media/audio/prueba.mp3" type="audio/mp3" />
+            <audio class="plyr-audio" controls preload="auto">
+              <source src="media/audio/DemoGeneral.mp3" type="audio/mp3" />
               Tu navegador no soporta el audio HTML5.
             </audio>
             <h3>demo general</h3>
@@ -60,8 +65,150 @@
     </div>
   </div>
   <div class="contenedor3">
-      <h2>demos</h2>
-      fejofjeofejo
+      <h2  id="demos">demos</h2>
+      <div class="contenedor-divisor"></div>
+        <div class="bloque-demos">
+
+          <!-- Título Publicidad -->
+          <h3 class="titulo-seccion">publicidad</h3>
+
+          <!-- Videos de publicidad -->
+          <div class="bloque-video">
+            <div class="fondo-marron"></div>
+            <video class="plyr-video" controls>
+              <source src="media/video/SPOT-KIABI.mp4" type="video/mp4" />
+              Tu navegador no soporta video HTML5.
+            </video>
+            <h3>publicidad - spot Kiabi (emocional)</h3>
+          </div>
+
+          <div class="bloque-video">
+            <div class="fondo-marron"></div>
+            <video class="plyr-video" controls>
+              <source src="media/video/SPOT-MACBOOK.mp4" type="video/mp4" />
+              Tu navegador no soporta video HTML5.
+            </video>
+            <h3>publicidad - spot MacBook (aspiracional/sensual)</h3>
+          </div>
+
+          <div class="bloque-video">
+            <div class="fondo-marron"></div>
+            <video class="plyr-video" controls>
+              <source src="media/video/SPOT-PHONEHOUSE.mp4" type="video/mp4" />
+              Tu navegador no soporta video HTML5.
+            </video>
+            <h3>publicidad - spot Phone House (dinámico/gamberro)</h3>
+          </div>
+
+          <div class="bloque-video">
+            <div class="fondo-marron"></div>
+            <video class="plyr-video" controls>
+              <source src="media/video/SPOT-MSC.mp4" type="video/mp4" />
+              Tu navegador no soporta video HTML5.
+            </video>
+            <h3>publicidad - spot MSC cruceros (elegante/profesional)</h3>
+          </div>
+
+          <!-- Título Corporativo/Motivacional -->
+          <h3 class="titulo-seccion">corporativo / motivacional</h3>
+
+          <!-- Videos corporativos/motivacionales -->
+          <div class="bloque-video">
+            <div class="fondo-marron"></div>
+            <video class="plyr-video" controls>
+              <source src="media/video/IBERDROLA.mp4" type="video/mp4" />
+              Tu navegador no soporta video HTML5.
+            </video>
+            <h3>corporativo - Iberdrola (motivacional)</h3>
+          </div>
+
+          <div class="bloque-video">
+            <div class="fondo-marron"></div>
+            <video class="plyr-video" controls>
+              <source src="media/video/te-atreves.mp4" type="video/mp4" />
+              Tu navegador no soporta video HTML5.
+            </video>
+            <h3>motivacional - Atrévete a soñar (inspirador)</h3>
+          </div>
+
+          <!-- Título Relatos -->
+          <h3 class="titulo-seccion">relatos</h3>
+
+          <!-- Videos o audios de relatos -->
+          <div class="bloque-audiotitulo">
+            <audio class="plyr-audio" controls>
+              <source src="media/audio/RELATO ESAS PALABRAS ROSANA.mp3" type="audio/mp3" />
+              Tu navegador no soporta el audio HTML5.
+            </audio>
+            <h3>relato - Esas palabras</h3>
+          </div>
+
+          <div class="bloque-audiotitulo">
+            <audio class="plyr-audio" controls>
+              <source src="media/audio/RELATO LA NOTIFICACIÓN ROSANA.mp3" type="audio/mp3" />
+              Tu navegador no soporta el audio HTML5.
+            </audio>
+            <h3>relato - La notificación</h3>
+          </div>
+
+          <!-- Título Doblaje -->
+          <h3 class="titulo-seccion">doblaje</h3>
+
+          <!-- Videos doblaje -->
+          <div class="bloque-video">
+            <div class="fondo-marron"></div>
+            <video class="plyr-video" controls>
+              <source src="media/video/EL ARTE DE AMAR ROSANA GONZALO Y PROFE.mp4" type="video/mp4" />
+              Tu navegador no soporta video HTML5.
+            </video>
+            <h3>doblaje - voz protagonista femenino</h3>
+          </div>
+
+          <div class="bloque-video">
+            <div class="fondo-marron"></div>
+            <video class="plyr-video" controls>
+              <source src="media/video/GIRL2 MARILÓ CRIS Y ROSANA.mp4" type="video/mp4" />
+              Tu navegador no soporta video HTML5.
+            </video>
+            <h3>doblaje - voz protagonista femenino de la izquierda</h3>
+          </div>
+
+          
+
+      
+          <!-- Agregar más demos aquí -->
+        </div>
+  </div>
+  <div class="contenedor4">
+    <h2  id="contacto">contacto</h2>
+    <div class="contenedor-formulario">
+      <form action="https://formspree.io/f/xwpbgdzj" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+    <div class="contenedor-datos">
+      <div class="datos-texto">
+        <p>rosanamj95@gmail.com</p>
+      </div>
+      
+      <div class="contenedor-redes">
+        <div class="columna-red">
+            <img src="img/microphone.png" alt="Instagram" width="10">
+            <span class="redes">@rosana_voice</span>
+          </div>
+          <div class="columna-red">
+            <img src="img/microphone.png" alt="Twitter" width="10">
+            <span class="redes">@rosana_voice</span>
+          </div>
+          <div class="columna-red">
+            <img src="img/microphone.png" alt="LinkedIn" width="10">
+            <span class="redes">Rosana Muñoz</span>
+          </div>
+      </div>
+    </div>
   </div>
 <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
 <script>
