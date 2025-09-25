@@ -10,6 +10,11 @@ html, body {
   overflow-x: hidden;
   width: 100%;
 }
+
+a {
+  color: inherit;          /* hace que use el mismo color del texto donde está */
+}
+
 .contenedor1 {
   background-color: #F6EFE1; /* Beige */
   color: #9E8E74;      /* Marrón */
